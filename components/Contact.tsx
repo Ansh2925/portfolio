@@ -28,7 +28,6 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section-pad relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(212,179,106,0.14),transparent_46%)]" />
       <div className="relative mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
           <p className="eyebrow">Contact</p>

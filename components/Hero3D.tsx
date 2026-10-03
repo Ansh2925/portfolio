@@ -9,14 +9,6 @@ import { useReducedMotion, useWebGL } from "@/lib/hooks";
 
 const HeroScene = dynamic(() => import("@/components/three/HeroScene"), { ssr: false });
 
-function Fallback() {
-  return (
-    <div className="absolute inset-0 overflow-hidden bg-[radial-gradient(circle_at_72%_42%,rgba(212,179,106,0.22),transparent_36%),radial-gradient(circle_at_18%_78%,rgba(126,191,184,0.14),transparent_40%)]" aria-hidden="true">
-      <div className="absolute right-[8%] top-1/2 hidden h-64 w-64 -translate-y-1/2 rounded-full border border-gold/25 md:block" />
-      <div className="absolute right-[12%] top-1/2 hidden h-40 w-40 -translate-y-1/2 rotate-12 border border-aqua/20 md:block" style={{ clipPath: "polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)" }} />
-    </div>
-  );
-}
 
 export default function Hero3D() {
   const webgl = useWebGL();
@@ -25,7 +17,6 @@ export default function Hero3D() {
   return (
     <section id="home" className="relative min-h-[100svh] overflow-hidden">
       <div className="absolute inset-0">
-        <Fallback />
         {webgl !== "no" ? (
           <Canvas
             className="absolute inset-0"

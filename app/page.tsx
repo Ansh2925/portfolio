@@ -18,7 +18,7 @@ export default function HomePage() {
       </a>
       <CursorLight />
       <Navbar />
-      <main>
+      <main className="relative z-10">
         <Hero3D />
         <AboutSkills />
         <Projects />

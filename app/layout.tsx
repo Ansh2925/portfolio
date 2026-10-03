@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, IBM_Plex_Mono, Michroma, Public_Sans } from "next/font/google";
+import GridBackground from "@/components/GridBackground";
 import "./globals.css";
 
 const display = Fraunces({
@@ -37,7 +38,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${display.variable} ${sans.variable} ${logo.variable} ${mono.variable}`}>
-      <body className="bg-void text-ink antialiased">{children}</body>
+      <body className="bg-void text-ink antialiased relative selection:bg-gold/30">
+        <GridBackground />
+        {children}
+      </body>
     </html>
   );
 }

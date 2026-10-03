@@ -21,11 +21,6 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="section-pad relative overflow-hidden">
-      {/* Background Subtle Gradient Glow */}
-      <div
-        className="pointer-events-none absolute left-1/2 top-0 h-[600px] w-full max-w-7xl -translate-x-1/2 bg-[radial-gradient(ellipse_at_top,rgba(212,179,106,0.08),transparent_60%)]"
-        aria-hidden="true"
-      />
 
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         {/* Section Header */}
