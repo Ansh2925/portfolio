@@ -184,7 +184,7 @@ function Skill3DCard({
                 className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-md transition-transform duration-300 group-hover:scale-110"
                 style={{ borderColor: `${group.accent}45` }}
               >
-                <CategoryIcon type={group.icon} accent={group.accent} />
+                {/* <CategoryIcon type={group.icon} accent={group.accent} /> */}
               </span>
               <span
                 className="font-mono text-[11px] font-medium tracking-[0.24em] uppercase"
