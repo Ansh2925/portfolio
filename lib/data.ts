@@ -19,21 +19,21 @@ export const navItems = [
 ];
 
 export const aboutCards = [
+  {
+    key: "ai-intelligence",
+    title: "Artificial Intelligence & Models",
+    copy: "Building autonomous systems, multimodal LLM pipelines, and fine-tuned neural models designed to turn complex raw signals into direct, actionable intelligence.",
+  },
   // {
-  //   key: "ai-intelligence",
-  //   title: "Artificial Intelligence & Models",
-  //   copy: "Building autonomous systems, multimodal LLM pipelines, and fine-tuned neural models designed to turn complex raw signals into direct, actionable intelligence.",
+  //   key: "full-stack-web",
+  //   title: "Full-Stack Web Architecture",
+  //   copy: "Crafting end-to-end resilient applications with modern React/Next.js frameworks, performant state management, and ergonomic component architectures.",
   // },
-  {
-    key: "full-stack-web",
-    title: "Full-Stack Web Architecture",
-    copy: "Crafting end-to-end resilient applications with modern React/Next.js frameworks, performant state management, and ergonomic component architectures.",
-  },
-  {
-    key: "backend-distributed",
-    title: "Backend Services & High Scale",
-    copy: "Architecting high-concurrency microservices with FastAPI and Node.js, utilizing Redis caching and PostgreSQL for high reliability and throughput.",
-  },
+  // {
+  //   key: "backend-distributed",
+  //   title: "Backend Services & High Scale",
+  //   copy: "Architecting high-concurrency microservices with FastAPI and Node.js, utilizing Redis caching and PostgreSQL for high reliability and throughput.",
+  // },
   // {
   //   key: "interactive-3d",
   //   title: "Spatial & Interactive Experiences",
@@ -46,7 +46,6 @@ export const skillGroups = [
     group: "AI / Machine Learning",
     tag: "01 / NEURAL & INTELLIGENCE",
     accent: "#d4b36a",
-    icon: "brain",
     description:
       "Developing neural architectures, fine-tuned LLM agents, and real-time inference pipelines that extract meaning from raw multi-modal inputs.",
     highlight: "Real-time inference & quantized models",
@@ -61,7 +60,6 @@ export const skillGroups = [
     group: "Frontend & Interactive 3D",
     tag: "02 / SPATIAL & REACTIVE WEB",
     accent: "#7ebfb8",
-    icon: "sparkles",
     description:
       "Crafting tactile web applications, interactive 3D simulations, and reactive interfaces designed with physics-based spring animations.",
     highlight: "Fluid 60fps graphics & spatial interactions",
@@ -80,7 +78,6 @@ export const skillGroups = [
     group: "Backend & Systems",
     tag: "03 / DISTRIBUTED COMPUTING",
     accent: "#d4b36a",
-    icon: "server",
     description:
       "Engineering resilient asynchronous microservices, event-driven pipelines, caching strategies, and structured relational datastores.",
     highlight: "High concurrency & sub-millisecond routing",
@@ -98,7 +95,6 @@ export const skillGroups = [
     group: "Cloud & DevOps",
     tag: "04 / PRODUCTION PLATFORMS",
     accent: "#7ebfb8",
-    icon: "cloud",
     description:
       "Containerizing production microservices, writing automated CI/CD workflows, and architecting robust cloud environments.",
     highlight: "Zero-downtime deployment & telemetry",

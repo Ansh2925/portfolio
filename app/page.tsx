@@ -2,8 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import Hero3D from "@/components/Hero3D";
-import About from "@/components/About";
-import SkillConstellation from "@/components/SkillConstellation";
+import AboutSkills from "@/components/AboutSkills";
 import Projects from "@/components/Projects";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import GitHubSection from "@/components/GitHubSection";
@@ -21,8 +20,7 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero3D />
-        <About />
-        <SkillConstellation />
+        <AboutSkills />
         <Projects />
         <ExperienceTimeline />
         <GitHubSection />
