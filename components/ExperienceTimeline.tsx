@@ -11,8 +11,8 @@ export default function ExperienceTimeline() {
   return (
     <section id="experience" className="section-pad">
       <div className="mx-auto max-w-6xl">
-        <p className="eyebrow">Experience</p>
-        <h2 className="display mt-4 text-4xl md:text-6xl">A timeline of making.</h2>
+        <p className="eyebrow">Journey</p>
+        <h2 className="display mt-4 text-4xl md:text-6xl">A timeline of building.</h2>
         <ol className="relative mt-14 space-y-6 before:absolute before:left-[18px] before:top-2 before:h-[calc(100%-1rem)] before:w-px before:bg-gradient-to-b before:from-gold/80 before:to-white/10 md:before:left-1/2">
           {experience.map((item, index) => (
             <motion.li

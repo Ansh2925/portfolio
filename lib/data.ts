@@ -19,11 +19,11 @@ export const navItems = [
 ];
 
 export const aboutCards = [
-  {
-    key: "ai-intelligence",
-    title: "Artificial Intelligence & Models",
-    copy: "Building autonomous systems, multimodal LLM pipelines, and fine-tuned neural models designed to turn complex raw signals into direct, actionable intelligence.",
-  },
+  // {
+  //   key: "ai-intelligence",
+  //   title: "Artificial Intelligence & Models",
+  //   copy: "Building autonomous systems, multimodal LLM pipelines, and fine-tuned neural models designed to turn complex raw signals into direct, actionable intelligence.",
+  // },
   {
     key: "full-stack-web",
     title: "Full-Stack Web Architecture",
@@ -34,11 +34,11 @@ export const aboutCards = [
     title: "Backend Services & High Scale",
     copy: "Architecting high-concurrency microservices with FastAPI and Node.js, utilizing Redis caching and PostgreSQL for high reliability and throughput.",
   },
-  {
-    key: "interactive-3d",
-    title: "Spatial & Interactive Experiences",
-    copy: "Pushing browser boundaries with Three.js, shaders, and physics-driven micro-interactions that make digital software feel tangible and alive.",
-  },
+  // {
+  //   key: "interactive-3d",
+  //   title: "Spatial & Interactive Experiences",
+  //   copy: "Pushing browser boundaries with Three.js, shaders, and physics-driven micro-interactions that make digital software feel tangible and alive.",
+  // },
 ];
 
 export const skillGroups = [
@@ -55,10 +55,6 @@ export const skillGroups = [
       "PyTorch",
       "TensorFlow",
       "Scikit-Learn",
-      "NLP",
-      "LLMs & RAG",
-      "Computer Vision",
-      "HuggingFace",
     ],
   },
   {
@@ -93,10 +89,9 @@ export const skillGroups = [
       "Node.js",
       "REST APIs",
       "PostgreSQL",
+      "MongoDB",
       "Redis",
-      "GraphQL",
       "AsyncIO",
-      "WebSockets",
     ],
   },
   {
@@ -114,7 +109,6 @@ export const skillGroups = [
       "GitHub Actions",
       "Linux / Bash",
       "Vercel",
-      "CI/CD Pipelines",
     ],
   },
 ];
@@ -184,28 +178,16 @@ export const projects = [
 
 export const experience = [
   {
-    id: "ai-engineer",
+    id: "Competitive Coding",
     year: "2025 — PRESENT",
-    title: "AI Engineer & Systems Builder",
-    copy: "Developing production-grade generative AI workflows, agentic automation platforms, and full-stack software combining machine intelligence with high-fidelity web experiences.",
+    title: "COMPETITIVE CODING",
+    copy: "Building consistency through competitive coding, problem solving, algorithms and data structures.",
   },
   {
-    id: "full-stack-dev",
-    year: "2024 — 2025",
-    title: "Full-Stack Developer",
-    copy: "Constructed resilient RESTful microservices, asynchronous Python backends, and responsive React web interfaces engineered for scale and speed.",
-  },
-  {
-    id: "open-source",
-    year: "2023 — 2024",
-    title: "Open Source Contributor & Researcher",
-    copy: "Shipped open-source repositories, algorithmic tools, and ML experiments while collaborating with developer communities across modern web standards.",
-  },
-  {
-    id: "hackathons",
-    year: "2022 — 2023",
-    title: "Competitive Prototyping & Hackathons",
-    copy: "Architected rapid-iteration prototypes in competitive hackathons, creating voice-driven tools, ERP integrations, and workflow automation solutions.",
+    id: "hackathons-competitive",
+    year: "2024 — Present",
+    title: "HACKATHONS & COMPETITIVE BUILDING",
+    copy: "Participated in 10+ hackathons and was shortlisted in 5, building and presenting projects under tight time constraints.",
   },
 ];
 
