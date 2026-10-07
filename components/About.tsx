@@ -21,7 +21,7 @@ export default function About() {
           Building at the intersection of AI & the Web.
         </motion.h2>
         <p className="mt-6 max-w-2xl text-mute">
-          Ansh works across research-adjacent intelligence and product-grade software — models that think, systems
+          I work across research-adjacent intelligence and product-grade software — models that think, systems
           that last, and interfaces that feel inevitable.
         </p>
         <div className="mt-12 grid gap-4 md:grid-cols-2">

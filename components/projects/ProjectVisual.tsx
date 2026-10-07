@@ -67,9 +67,9 @@ export default function ProjectVisual({
 
             {/* Neural Matrix Overlay */}
             <div className="mt-3 flex w-full items-center justify-between border-t border-white/10 px-2 pt-2 font-mono text-[9px] text-mute">
-              <span>LATENCY: &lt;18ms</span>
-              <span style={{ color: accent }}>TENSOR: ACTIVE</span>
-              <span>CONF: 94.8%</span>
+              <span>LATENCY: &lt;250ms</span>
+              <span style={{ color: accent }}>GEMINI AI: ACTIVE</span>
+              <span>ROOM DB: SYNCED</span>
             </div>
           </div>
         )}
@@ -145,7 +145,7 @@ export default function ProjectVisual({
           <div className="relative flex w-full flex-col items-center justify-center">
             {/* Pipeline Stages */}
             <div className="flex w-full items-center justify-between gap-2 px-2">
-              {["INBOUND", "INTENT_AI", "SCORE", "DISPATCH"].map((stage, i) => (
+              {["LEADS", "QUALIFIED", "DEALS", "WON"].map((stage, i) => (
                 <div key={i} className="flex flex-1 flex-col items-center">
                   <div
                     className="flex h-7 w-full items-center justify-center rounded-md border text-[9px] font-mono transition-colors"
@@ -163,20 +163,20 @@ export default function ProjectVisual({
 
             {/* Velocity readout */}
             <div className="mt-4 flex w-full items-center justify-between border-t border-white/10 px-2 pt-2 font-mono text-[9px] text-mute">
-              <span>WORKFLOW: SYNC</span>
-              <span style={{ color: accent }}>&lt;150ms SCORE</span>
-              <span>AUTO QUALIFIED</span>
+              <span>CELERY QUEUE</span>
+              <span style={{ color: accent }}>REDIS ACTIVE</span>
+              <span>SILENT JWT</span>
             </div>
           </div>
         )}
 
         {visualType === "graph" && (
           <div className="relative flex w-full flex-col items-center justify-center">
-            {/* Entity Disambiguation Graph */}
+            {/* Network Graph */}
             <div className="relative flex h-20 w-full items-center justify-around px-4">
               <div className="flex flex-col gap-2">
-                <div className="h-4 w-14 rounded border border-white/15 bg-white/5 font-mono text-[8px] flex items-center justify-center text-mute">ENT_A</div>
-                <div className="h-4 w-14 rounded border border-white/15 bg-white/5 font-mono text-[8px] flex items-center justify-center text-mute">ENT_B</div>
+                <div className="h-4 w-14 rounded border border-white/15 bg-white/5 font-mono text-[8px] flex items-center justify-center text-mute">DONOR</div>
+                <div className="h-4 w-14 rounded border border-white/15 bg-white/5 font-mono text-[8px] flex items-center justify-center text-mute">SHELTER</div>
               </div>
 
               {/* Connecting similarity beam */}
@@ -186,7 +186,7 @@ export default function ProjectVisual({
                     className="absolute -top-3 left-1/2 -translate-x-1/2 rounded bg-black px-1 font-mono text-[8px]"
                     style={{ color: accent }}
                   >
-                    SIM 0.98
+                    MATCH
                   </span>
                 </div>
               </div>
@@ -196,17 +196,17 @@ export default function ProjectVisual({
                   className="h-9 w-16 rounded border flex flex-col items-center justify-center font-mono text-[8px]"
                   style={{ borderColor: accent, background: `${accent}15`, color: accent }}
                 >
-                  RESOLVED
-                  <span className="text-[7px] text-ink/70">CLUSTER_01</span>
+                  CLAIMED
+                  <span className="text-[7px] text-ink/70">VERIFIED</span>
                 </div>
               </div>
             </div>
 
-            {/* Disambiguation metrics */}
+            {/* Distribution metrics */}
             <div className="mt-2 flex w-full items-center justify-between border-t border-white/10 px-2 pt-2 font-mono text-[9px] text-mute">
-              <span>LSH BLOCKING</span>
-              <span style={{ color: accent }}>F1: 0.962</span>
-              <span>85K REC/S</span>
+              <span>SUPABASE PG</span>
+              <span style={{ color: accent }}>LATENCY: &lt;40ms</span>
+              <span>FOOD CONNECT</span>
             </div>
           </div>
         )}
@@ -217,14 +217,14 @@ export default function ProjectVisual({
             <div className="flex w-full items-center justify-between gap-3 px-3">
               <div className="flex flex-1 flex-col gap-1.5">
                 <div className="flex justify-between font-mono text-[8px] text-mute">
-                  <span>EDGE RPS</span>
-                  <span style={{ color: accent }}>18.5k/s</span>
+                  <span>RENDER FPS</span>
+                  <span style={{ color: accent }}>60fps</span>
                 </div>
                 <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
                   <div
                     className="h-full rounded-full transition-all duration-500"
                     style={{
-                      width: isHovered ? "88%" : "72%",
+                      width: isHovered ? "96%" : "85%",
                       background: accent,
                     }}
                   />
@@ -233,14 +233,14 @@ export default function ProjectVisual({
 
               <div className="flex flex-1 flex-col gap-1.5">
                 <div className="flex justify-between font-mono text-[8px] text-mute">
-                  <span>P99 TIME</span>
-                  <span style={{ color: accent }}>4.2ms</span>
+                  <span>LIGHTHOUSE</span>
+                  <span style={{ color: accent }}>98/100</span>
                 </div>
                 <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
                   <div
                     className="h-full rounded-full transition-all duration-500"
                     style={{
-                      width: "35%",
+                      width: "98%",
                       background: accent,
                     }}
                   />
@@ -250,9 +250,9 @@ export default function ProjectVisual({
 
             {/* Telemetry Footer */}
             <div className="mt-4 flex w-full items-center justify-between border-t border-white/10 px-2 pt-2 font-mono text-[9px] text-mute">
-              <span>ASYNCIO GATEWAY</span>
-              <span style={{ color: accent }}>HIT 96.4%</span>
-              <span>ZERO LOSS</span>
+              <span>THREE.JS / SHADERS</span>
+              <span style={{ color: accent }}>60FPS STABLE</span>
+              <span>NEXT.JS 15</span>
             </div>
           </div>
         )}

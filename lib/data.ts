@@ -111,64 +111,64 @@ export const skillGroups = [
 
 export const projects = [
   {
-    id: "cognitive-signal",
+    id: "spendly-android-app",
     index: "01",
-    tag: "AI / MACHINE LEARNING",
-    title: "Cognitive Signal",
+    tag: "GEMINI AI & ANDROID",
+    title: "Spendly",
     description:
-      "An intelligent neural representation system designed to analyze multidimensional time-series and generate predictive anomaly detection in real time.",
-    technologies: ["Python", "PyTorch", "FastAPI", "React", "Docker"],
+      "A modern native Android expense tracker leveraging the Google Gemini API to analyze daily spending, parse receipts, and automate budgeting.",
+    technologies: ["Kotlin", "Jetpack Compose", "Gemini API", "Room DB", "Supabase", "Dagger Hilt"],
     problem:
-      "Industrial sensors produce high-velocity multidimensional streams that overwhelm traditional static threshold monitors, resulting in false alerts.",
+      "Manual expense tracking apps suffer from high cognitive friction and rigid category setups, causing users to abandon recording their daily expenditures.",
     solution:
-      "Designed a real-time transformer-based encoder with quantized inference on FastAPI workers, achieving sub-20ms latency and 94% anomaly precision.",
-    github: "https://github.com/Ansh2925",
-    demo: "https://github.com/Ansh2925",
+      "Developed an intelligent, lightweight tracker using Gemini AI to understand contextual expense entries, paired with an offline-first reactive Room database.",
+    github: "https://github.com/Ansh2925/spendly-android-app",
+    demo: "https://github.com/Ansh2925/spendly-android-app",
   },
   {
-    id: "city-muse",
+    id: "portfolio",
     index: "02",
-    tag: "VOICE & URBAN AI",
-    title: "CityMuse Voice Flow",
+    tag: "SPATIAL & INTERACTIVE 3D",
+    title: "3D Cybernetic Portfolio",
     description:
-      "An audio-first urban intelligence platform combining interactive maps, real-time voice synthesis, and dynamic point-of-interest discovery.",
-    technologies: ["TypeScript", "Next.js", "Python", "Web Audio API", "Tailwind CSS"],
+      "An immersive personal portfolio platform showcasing software engineering work through interactive 3D WebGL scenes, card physics, and spatial typography.",
+    technologies: ["Next.js", "React 19", "TypeScript", "Three.js", "React Three Fiber", "Tailwind CSS"],
     problem:
-      "Traditional city navigation apps demand continuous screen attention, disrupting the user's natural exploration and engagement with surroundings.",
+      "Conventional web portfolios rely on static templates that fail to communicate deep systems competence or leave a memorable sensory impression.",
     solution:
-      "Engineered an ambient voice-guidance engine with spatial POI indexing and streaming audio synthesis for hands-free contextual discovery.",
-    github: "https://github.com/Ansh2925/CityMuse",
-    demo: "https://github.com/Ansh2925/citymuse-voice-flow",
+      "Constructed a cybernetic digital landscape fusing Three.js particle systems, dynamic viewport lighting, and spatial audio-visual card animations.",
+    github: "https://github.com/Ansh2925/portfolio",
+    demo: "https://github.com/Ansh2925/portfolio",
   },
   {
-    id: "asset-flow",
+    id: "minimised-crm",
     index: "03",
-    tag: "ENTERPRISE SYSTEMS",
-    title: "AssetFlow Management",
+    tag: "ENTERPRISE DISTRIBUTED SYSTEM",
+    title: "Minimised CRM",
     description:
-      "A comprehensive asset tracking and workflow optimization engine built to streamline hardware lifecycle governance and audit verification.",
-    technologies: ["TypeScript", "React", "Node.js", "PostgreSQL", "Docker"],
+      "A clean, high-performance Customer Relationship Management suite featuring automated sales pipelines, JWT auth with silent refresh, and background task queues.",
+    technologies: ["Python", "Django REST Framework", "React 19", "Vite", "Tailwind CSS", "Celery", "Redis"],
     problem:
-      "Enterprise teams lose thousands of hours reconciling disparate equipment inventories across silos without centralized traceability.",
+      "Bloated enterprise CRMs overwhelm sales teams with excessive complexity and lack fast asynchronous pipelines for managing high-volume leads and follow-ups.",
     solution:
-      "Built an event-sourced asset ledger with automated checkout validations, real-time status telemetry, and granular role-based permissions.",
-    github: "https://github.com/Ansh2925/AssetFlow_Bug_Hunters_011_odoo",
-    demo: "https://github.com/Ansh2925/AssetFlow_Bug_Hunters_011_odoo",
+      "Delivered a streamlined full-stack architecture with real-time deal stage transitions, automated Celery follow-up queues, and silent JWT token renewal.",
+    github: "https://github.com/AKNursumar/Minimised-version-of-CRM",
+    demo: "https://github.com/AKNursumar/Minimised-version-of-CRM",
   },
   {
-    id: "autonomous-crm",
+    id: "ration-bridge",
     index: "04",
-    tag: "INTELLIGENT AUTOMATION",
-    title: "Autonomous CRM Engine",
+    tag: "COMMUNITY LOGISTICS & CLOUD",
+    title: "RationBridge",
     description:
-      "A customer relationship automation suite with predictive lead scoring, communication sentiment tracking, and autonomous deal pipeline updates.",
-    technologies: ["Python", "FastAPI", "Next.js", "PostgreSQL", "Redis"],
+      "A community-driven food logistics platform connecting commercial food donors with shelters and recipients to eliminate food waste.",
+    technologies: ["Node.js", "Express.js", "Supabase", "PostgreSQL", "JavaScript", "Docker"],
     problem:
-      "Sales organizations spend over 30% of their bandwidth manually tagging prospect communications and guessing lead priority.",
+      "Commercial businesses and events discard substantial volumes of edible food daily due to lack of a direct, low-friction channel to connect with local recipients.",
     solution:
-      "Deployed NLP-driven sentiment analysis and automated workflow triggers that qualify incoming opportunities and orchestrate next actions.",
-    github: "https://github.com/Ansh2925/CRM",
-    demo: "https://github.com/Ansh2925/CRM",
+      "Architected a centralized redistribution portal with real-time food claim notifications, pickup location tracking, and verified profile credentials.",
+    github: "https://github.com/AKNursumar/RationBridge",
+    demo: "https://github.com/AKNursumar/RationBridge",
   },
 ];
 
@@ -191,33 +191,33 @@ export const languageMix = [
   { name: "Python", value: 42 },
   { name: "TypeScript", value: 34 },
   { name: "JavaScript", value: 20 },
-  { name: "C++ / Systems", value: 12 },
+  { name: "Kotlin", value: 16 },
   { name: "HTML / CSS", value: 10 },
 ];
 
 export const githubRepos = [
   {
-    name: "AssetFlow_Bug_Hunters_011_odoo",
-    url: "https://github.com/Ansh2925/AssetFlow_Bug_Hunters_011_odoo",
+    name: "spendly-android-app",
+    url: "https://github.com/Ansh2925/spendly-android-app",
+    language: "Kotlin",
+    description: "Modern Android expense tracker powered by Google Gemini API, Room DB, and Supabase.",
+  },
+  {
+    name: "portfolio",
+    url: "https://github.com/Ansh2925/portfolio",
     language: "TypeScript",
-    description: "Asset tracking and enterprise workflow management platform built with modern TypeScript and web services.",
+    description: "Interactive 3D developer portfolio built with Next.js 15, Three.js, and Framer Motion.",
   },
   {
-    name: "Backend",
-    url: "https://github.com/Ansh2925/Backend",
+    name: "Minimised-version-of-CRM",
+    url: "https://github.com/AKNursumar/Minimised-version-of-CRM",
     language: "Python",
-    description: "High-performance asynchronous backend services with database connectivity and modular API routing.",
+    description: "Full-stack enterprise CRM with Django REST Framework, Celery background workers, and React 19.",
   },
   {
-    name: "CityMuse",
-    url: "https://github.com/Ansh2925/CityMuse",
-    language: "TypeScript",
-    description: "Interactive urban discovery and location-aware recommendations powered by modern web frontend technologies.",
-  },
-  {
-    name: "CRM",
-    url: "https://github.com/Ansh2925/CRM",
-    language: "Python",
-    description: "Intelligent customer relationship management application with automated pipeline tracking and lead insights.",
+    name: "RationBridge",
+    url: "https://github.com/AKNursumar/RationBridge",
+    language: "JavaScript",
+    description: "Community surplus food redistribution platform built with Node.js, Express, and Supabase.",
   },
 ];
