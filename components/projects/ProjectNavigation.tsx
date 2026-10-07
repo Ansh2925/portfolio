@@ -26,6 +26,7 @@ export default function ProjectNavigation({
       <div className="flex items-center gap-2">
         <button
           type="button"
+          suppressHydrationWarning
           onClick={onPrev}
           aria-label="Previous project card"
           className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-ink transition-all hover:border-gold hover:bg-white/[0.08] active:scale-95"
@@ -34,6 +35,7 @@ export default function ProjectNavigation({
         </button>
         <button
           type="button"
+          suppressHydrationWarning
           onClick={onNext}
           aria-label="Next project card"
           className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-ink transition-all hover:border-gold hover:bg-white/[0.08] active:scale-95"
@@ -53,6 +55,7 @@ export default function ProjectNavigation({
             <button
               key={project.id}
               type="button"
+              suppressHydrationWarning
               onClick={() => onSelect(idx)}
               aria-label={`Jump to project ${project.number}: ${project.title}`}
               className="relative p-1 focus:outline-none"

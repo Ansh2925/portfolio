@@ -55,6 +55,7 @@ export default function ProjectsSection() {
                 <button
                   key={category}
                   type="button"
+                  suppressHydrationWarning
                   onClick={() => setActiveCategory(category)}
                   className={`rounded-full px-3.5 py-1.5 font-mono text-xs tracking-wider transition-all duration-300 ${
                     isActive

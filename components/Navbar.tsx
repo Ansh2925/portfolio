@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { navItems, profile } from "@/lib/data";
+import { useReducedMotion } from "@/lib/hooks";
 
 function IconGitHub() {
   return (
@@ -22,6 +24,8 @@ function IconLinkedIn() {
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [isCitycardFullscreen, setIsCitycardFullscreen] = useState(false);
+  const reducedMotion = useReducedMotion();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -30,21 +34,53 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const handleCitycardFullscreen = (e: Event) => {
+      const customEvent = e as CustomEvent<boolean>;
+      setIsCitycardFullscreen(Boolean(customEvent.detail));
+    };
+
+    window.addEventListener("citycard:fullscreen", handleCitycardFullscreen);
+    return () => {
+      window.removeEventListener("citycard:fullscreen", handleCitycardFullscreen);
+    };
+  }, []);
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-3 pt-4 md:px-6">
+    <motion.header
+      initial={false}
+      animate={{
+        y: isCitycardFullscreen ? -120 : 0,
+        opacity: isCitycardFullscreen ? 0 : 1,
+      }}
+      transition={{
+        duration: reducedMotion ? 0.1 : 0.45,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className="fixed inset-x-0 top-0 z-50 flex justify-center px-3 pt-4 md:px-6 pointer-events-auto"
+      style={{
+        pointerEvents: isCitycardFullscreen ? "none" : "auto",
+      }}
+    >
       <nav
         aria-label="Primary"
-        className={`glass flex w-full max-w-6xl items-center justify-between rounded-full px-4 py-2.5 shadow-glass transition-all duration-500 ${
+        className={`glass navbar-dynamic flex w-full max-w-6xl items-center justify-between rounded-full px-4 py-2.5 shadow-glass transition-colors duration-500 ${
           scrolled ? "bg-black/70" : "bg-black/35"
         }`}
       >
-        <a href="#home" className="font-logo text-[11px] tracking-[0.32em] text-ink">
+        <a
+          href="#home"
+          className="font-logo text-[11px] tracking-[0.32em] text-ink inline-block transition-transform duration-200 hover:scale-105 active:scale-95"
+        >
           ANSH.
         </a>
-        <ul className="hidden items-center gap-6 text-[13px] text-mute md:flex">
+        <ul className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (
-            <li key={item.id}>
-              <a className="transition-colors hover:text-ink" href={`#${item.id}`}>
+            <li key={item.id} className="relative">
+              <a
+                className="nav-pop-item font-jetbrains text-[12.5px] font-medium tracking-wide text-mute hover:text-ink py-1 px-1.5"
+                href={`#${item.id}`}
+              >
                 {item.label}
               </a>
             </li>
@@ -56,7 +92,7 @@ export default function Navbar() {
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub profile"
-            className="rounded-full p-2 text-ink/80 hover:text-gold"
+            className="rounded-full p-2 text-ink/80 hover:text-gold transition-all duration-200 hover:scale-110 active:scale-95"
           >
             <IconGitHub />
           </a>
@@ -65,13 +101,14 @@ export default function Navbar() {
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn"
-            className="rounded-full p-2 text-ink/80 hover:text-gold"
+            className="rounded-full p-2 text-ink/80 hover:text-gold transition-all duration-200 hover:scale-110 active:scale-95"
           >
             <IconLinkedIn />
           </a>
           <button
             type="button"
-            className="rounded-full px-3 py-2 text-xs text-ink md:hidden"
+            suppressHydrationWarning
+            className="rounded-full px-3 py-2 font-jetbrains text-xs text-ink md:hidden transition-transform duration-200 active:scale-95"
             aria-expanded={open}
             aria-controls="mobile-nav"
             onClick={() => setOpen((value) => !value)}
@@ -85,11 +122,11 @@ export default function Navbar() {
           id="mobile-nav"
           className="glass absolute left-3 right-3 top-[4.4rem] rounded-3xl p-4 md:hidden"
         >
-          <ul className="grid gap-2 text-sm">
+          <ul className="grid gap-2 text-sm font-jetbrains">
             {navItems.map((item) => (
               <li key={item.id}>
                 <a
-                  className="block rounded-2xl px-3 py-2 hover:bg-white/5"
+                  className="nav-pop-item block rounded-2xl px-3 py-2 font-jetbrains text-mute hover:text-ink hover:bg-white/5"
                   href={`#${item.id}`}
                   onClick={() => setOpen(false)}
                 >
@@ -100,6 +137,6 @@ export default function Navbar() {
           </ul>
         </div>
       ) : null}
-    </header>
+    </motion.header>
   );
 }

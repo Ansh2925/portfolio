@@ -97,6 +97,7 @@ export default function ProjectContent({
       <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-4">
         <button
           type="button"
+          suppressHydrationWarning
           onClick={onOpenModal}
           className="inline-flex items-center gap-2 rounded-full px-4 py-2 font-mono text-xs uppercase tracking-wider text-ink transition-all duration-300 hover:scale-105"
           style={{

@@ -49,7 +49,14 @@ export default function MagneticButton({
   }
 
   return (
-    <button type={type} onClick={onClick} onPointerMove={magnetize} onPointerLeave={reset} className={cls}>
+    <button
+      type={type}
+      suppressHydrationWarning
+      onClick={onClick}
+      onPointerMove={magnetize}
+      onPointerLeave={reset}
+      className={cls}
+    >
       {children}
     </button>
   );

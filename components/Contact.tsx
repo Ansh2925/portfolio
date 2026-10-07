@@ -52,15 +52,15 @@ export default function Contact() {
             <div className="grid gap-4">
               <label className="grid gap-2 text-sm">
                 Name
-                <input name="name" autoComplete="name" required />
+                <input name="name" autoComplete="name" required suppressHydrationWarning />
               </label>
               <label className="grid gap-2 text-sm">
                 Email
-                <input name="email" type="email" autoComplete="email" required />
+                <input name="email" type="email" autoComplete="email" required suppressHydrationWarning />
               </label>
               <label className="grid gap-2 text-sm">
                 Message
-                <textarea name="message" rows={5} required />
+                <textarea name="message" rows={5} required suppressHydrationWarning />
               </label>
               {error ? <p className="text-sm text-gold">{error}</p> : null}
               <MagneticButton type="submit">Send Message</MagneticButton>

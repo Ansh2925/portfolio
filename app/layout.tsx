@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, IBM_Plex_Mono, Michroma, Public_Sans } from "next/font/google";
+import { Fraunces, IBM_Plex_Mono, JetBrains_Mono, Michroma, Public_Sans } from "next/font/google";
 import GridBackground from "@/components/GridBackground";
 import "./globals.css";
 
@@ -29,6 +29,13 @@ const mono = IBM_Plex_Mono({
   display: "swap",
 });
 
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-jetbrains",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Ansh — AI Engineer & Full-Stack Developer",
   description:
@@ -37,8 +44,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${display.variable} ${sans.variable} ${logo.variable} ${mono.variable}`}>
-      <body className="bg-void text-ink antialiased relative selection:bg-gold/30">
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${display.variable} ${sans.variable} ${logo.variable} ${mono.variable} ${jetbrainsMono.variable}`}
+    >
+      <body suppressHydrationWarning className="bg-void text-ink antialiased relative selection:bg-gold/30">
         <GridBackground />
         {children}
       </body>

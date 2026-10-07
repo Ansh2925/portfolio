@@ -95,6 +95,56 @@ textarea {
   -webkit-backdrop-filter: blur(22px);
 }
 
+/* Dynamic Navbar & Navigation Pop-out Effects */
+.navbar-dynamic {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.35s ease,
+              background-color 0.5s ease;
+  will-change: transform, box-shadow;
+}
+
+.navbar-dynamic:hover {
+  transform: scale(1.015) translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 20px 48px -4px rgba(0, 0, 0, 0.75), 0 0 28px 0 rgba(212, 179, 106, 0.14);
+}
+
+.nav-pop-item {
+  display: inline-block;
+  will-change: transform, color;
+  /* Normal resting state - delayed return after unhover */
+  transform: scale(1) translateY(0);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1) 180ms,
+              color 0.25s ease 180ms,
+              text-shadow 0.25s ease 180ms;
+}
+
+.nav-pop-item:hover,
+.nav-pop-item:focus-visible {
+  /* Popped-out state - immediate pop out with overshoot spring feel */
+  transform: scale(1.15) translateY(-2px);
+  color: var(--ink);
+  text-shadow: 0 0 14px rgba(243, 238, 228, 0.5);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0ms,
+              color 0.15s ease 0ms,
+              text-shadow 0.15s ease 0ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-dynamic:hover {
+    transform: none;
+  }
+  .nav-pop-item {
+    transform: none !important;
+    transition: color 0.2s ease !important;
+  }
+  .nav-pop-item:hover,
+  .nav-pop-item:focus-visible {
+    transform: none !important;
+  }
+}
+
 .section-pad {
   padding: 7.5rem 1.25rem;
 }

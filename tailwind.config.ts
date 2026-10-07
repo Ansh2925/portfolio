@@ -27,6 +27,7 @@ const config: Config = {
         sans: ["var(--font-sans)", "sans-serif"],
         logo: ["var(--font-logo)", "sans-serif"],
         mono: ["var(--font-mono)", "monospace"],
+        jetbrains: ["var(--font-jetbrains)", "monospace"],
       },
       boxShadow: {
         glass: "0 8px 32px 0 rgba(0, 0, 0, 0.37)",

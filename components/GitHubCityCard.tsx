@@ -59,6 +59,28 @@ export default function GitHubCityCard() {
     setCacheTimestamp(Date.now());
   }, []);
 
+  // Handle fullscreen modal open / close, ESC key, body scroll lock, and navbar slide-up notification
+  useEffect(() => {
+    if (!isExpanded) {
+      window.dispatchEvent(new CustomEvent("citycard:fullscreen", { detail: false }));
+      return;
+    }
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsExpanded(false);
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKeyDown);
+    window.dispatchEvent(new CustomEvent("citycard:fullscreen", { detail: true }));
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKeyDown);
+      window.dispatchEvent(new CustomEvent("citycard:fullscreen", { detail: false }));
+    };
+  }, [isExpanded]);
+
   const currentSrc = imgError
     ? selectedVariant.fallbackSrc
     : cacheTimestamp
@@ -172,6 +194,7 @@ export default function GitHubCityCard() {
             <div className="flex items-center gap-2">
               <button
                 type="button"
+                suppressHydrationWarning
                 onClick={handleRefresh}
                 title="Sync and refresh latest 3D City from GitHub"
                 className={`flex h-7 w-7 items-center justify-center rounded-full border border-white/10 bg-black/40 text-mute transition-transform hover:border-white/30 hover:text-ink ${
@@ -189,6 +212,7 @@ export default function GitHubCityCard() {
                     <button
                       key={variant.id}
                       type="button"
+                      suppressHydrationWarning
                       onClick={() => handleVariantChange(variant)}
                       className={`rounded-full px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider transition-all duration-200 ${
                         isActive
@@ -263,6 +287,7 @@ export default function GitHubCityCard() {
             <div className="flex items-center gap-3">
               <button
                 type="button"
+                suppressHydrationWarning
                 onClick={() => setIsExpanded(true)}
                 className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-mute hover:text-ink transition-colors"
               >
@@ -332,6 +357,7 @@ export default function GitHubCityCard() {
                   </a>
                   <button
                     type="button"
+                    suppressHydrationWarning
                     onClick={() => setIsExpanded(false)}
                     className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 text-mute hover:text-ink"
                     aria-label="Close modal"
